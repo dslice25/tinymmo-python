@@ -1,0 +1,17 @@
+      "ICON": {
+              "down": {
+                  "image": {
+                      "source": "icons/ICON.png",
+                      "frame": [6, 6, 3, 3],
+                      "padding": [12, 12, 4, 2]
+                  },
+                  "text_color": [0, 0, 0, 255]
+              },
+              "up": {
+                  "image": {
+                      "source": "icons/ICON.png",
+                      "frame": [6, 6, 3, 3],
+                      "padding": [12, 12, 4, 2]
+                  }
+              }
+            },

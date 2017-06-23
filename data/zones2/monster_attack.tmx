@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" source="../LPC_Terrain/Terrain.tsx"/>
+ <tileset firstgid="1025" name="grass" tilewidth="32" tileheight="32" tilecount="18" columns="3">
+  <image source="../LPC Base Assets/tiles/grass.png" width="96" height="192"/>
+ </tileset>
+ <tileset firstgid="1043" name="house" tilewidth="32" tileheight="32" tilecount="63" columns="9">
+  <image source="../LPC Base Assets/tiles/house.png" width="288" height="224"/>
+ </tileset>
+ <tileset firstgid="1106" name="trunk" tilewidth="32" tileheight="32" tilecount="18" columns="6">
+  <image source="../LPC Base Assets/tiles/trunk.png" width="192" height="96"/>
+ </tileset>
+ <tileset firstgid="1124" name="treetop" tilewidth="32" tileheight="32" tilecount="42" columns="6">
+  <image source="../LPC Base Assets/tiles/treetop.png" width="192" height="224"/>
+ </tileset>
+ <tileset firstgid="1166" name="bridges" tilewidth="32" tileheight="32" tilecount="42" columns="6">
+  <image source="../LPC Base Assets/tiles/bridges.png" width="192" height="224"/>
+ </tileset>
+ <tileset firstgid="1208" name="signs" tilewidth="32" tileheight="32" tilecount="6" columns="3">
+  <image source="../LPC Base Assets/tiles/signs.png" width="96" height="64"/>
+ </tileset>
+ <tileset firstgid="1214" name="rock" tilewidth="32" tileheight="32" tilecount="2" columns="2">
+  <image source="../LPC Base Assets/tiles/rock.png" width="64" height="32"/>
+ </tileset>
+ <tileset firstgid="1216" name="barrel" tilewidth="32" tileheight="32" tilecount="8" columns="4">
+  <image source="../LPC Base Assets/tiles/barrel.png" width="128" height="64"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="30" height="20">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

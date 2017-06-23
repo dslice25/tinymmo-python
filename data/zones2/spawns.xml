@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objecttypes>
+ <objecttype name="monster_spawn" color="#a40518">
+  <property name="max_spawn" type="int" default="0"/>
+  <property name="spawn_delay" type="float" default="0"/>
+ </objecttype>
+ <objecttype name="warp" color="#a0a0a4">
+  <property name="end_x" type="int" default="0"/>
+  <property name="end_y" type="int" default="0"/>
+  <property name="end_zone" type="string"/>
+ </objecttype>
+ <objecttype name="npc_spawn" color="#3d00a4">
+  <property name="max_spawn" type="int" default="0"/>
+  <property name="spawn_delay" type="float" default="0"/>
+ </objecttype>
+</objecttypes>

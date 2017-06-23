@@ -1,0 +1,193 @@
+{ "font": "Papyrus",
+  "font_size": 8,
+  "text_color": [255, 255, 255, 255],
+  "gui_color": [255, 255, 255, 255],
+  "highlight_color": [255, 0, 0, 64],
+  "input": {
+      "image": {
+          "source": "input.png",
+          "frame": [3, 3, 2, 2],
+          "padding": [3, 3, 2, 3]
+      },
+      "focus_color": [255, 255, 255, 64],
+      "focus": {
+          "image": {
+              "source": "input-highlight.png"
+          }
+      }
+  },
+  "frame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "chatFrame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "messageFrame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "connectFrame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "loginFrame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "charFrame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "invFrame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "shopFrame": {
+      "image": {
+          "source": "panel.png",
+          "frame": [8, 8, 16, 16],
+          "padding": [16, 16, 8, 8]
+      }
+  },
+  "vscrollbar": {
+      "knob": {
+          "image": {
+              "source": "vscrollbar.png",
+              "region": [0, 16, 16, 16],
+              "frame": [0, 6, 16, 4],
+              "padding": [0, 0, 0, 0]
+          },
+          "offset": [0, 0]
+      },
+      "bar": {
+          "image": {
+              "source": "vscrollbar.png",
+              "region": [0, 64, 16, 16]
+          },
+          "padding": [0, 0, 0, 0]
+      }
+  },
+  "button": {
+      "down": {
+          "image": {
+              "source": "button-down.png",
+              "frame": [6, 6, 3, 3],
+              "padding": [12, 12, 4, 2]
+          },
+          "text_color": [0, 0, 0, 255]
+      },
+      "up": {
+          "image": {
+              "source": "button.png",
+              "frame": [6, 6, 3, 3],
+              "padding": [12, 12, 4, 2]
+          }
+      }
+  },
+  "checkbox": {
+      "checked": {
+          "image": {
+              "source": "checkbox-checked.png"
+          }
+      },
+      "unchecked": {
+          "image": {
+              "source": "checkbox.png"
+          }
+      }
+  },
+  "hscrollbar": {
+      "bar": {
+          "image": {
+              "source": "hscrollbar.png",
+              "region": [16, 0, 16, 16]
+          },
+          "padding": [0, 0, 0, 0]
+      },
+      "knob": {
+          "image": {
+              "source": "hscrollbar.png",
+              "region": [64, 0, 16, 16],
+              "frame": [6, 0, 4, 16],
+              "padding": [0, 0, 0, 0]
+          },
+          "offset": [0, 0]
+      }
+  },
+  "icons": {
+    "armor": { "image": "icons/armor.png" },
+    "axe": { "image": "icons/axe.png" },
+    "axe2": { "image": "icons/axe2.png" },
+    "axeDouble": { "image": "icons/axeDouble.png" },
+    "axeDouble2": { "image": "icons/axeDouble2.png" },
+    "backpack": { "image": "icons/backpack.png" },
+    "bow": { "image": "icons/bow.png" },
+    "chain_armor": { "image": "icons/chain_armor.png" },
+    "chain_hat": { "image": "icons/chain_hat.png" },
+    "chain_hood": { "image": "icons/chain_hood.png" },
+    "cloth_hood": { "image": "icons/cloth_hood.png" },
+    "coin": { "image": "icons/coin.png" },
+    "dagger": { "image": "icons/dagger.png" },
+    "envelope": { "image": "icons/envelope.png" },
+    "gemBlue": { "image": "icons/gemBlue.png" },
+    "gemGreen": { "image": "icons/gemGreen.png" },
+    "gemRed": { "image": "icons/gemRed.png" },
+    "hammer": { "image": "icons/hammer.png" },
+    "heart": { "image": "icons/heart.png" },
+    "helm": { "image": "icons/helm.png" },
+    "helmet": { "image": "icons/helmet.png" },
+    "leather_armor": { "image": "icons/leather_armor.png" },
+    "leather_cap": { "image": "icons/leather_cap.png" },
+    "map": { "image": "icons/map.png" },
+    "plate_armor": { "image": "icons/plate_armor.png" },
+    "potionBlue": { "image": "icons/potionBlue.png" },
+    "potionGreen": { "image": "icons/potionGreen.png" },
+    "potionRed": { "image": "icons/potionRed.png" },
+    "scroll": { "image": "icons/scroll.png" },
+    "shield": { "image": "icons/shield.png" },
+    "shieldSmall": { "image": "icons/shieldSmall.png" },
+    "spear": { "image": "icons/spear.png" },
+    "statue": { "image": "icons/statue.png" },
+    "sword": { "image": "icons/sword.png" },
+    "swordWood": { "image": "icons/swordWood.png" },
+    "tome": { "image": "icons/tome.png" },
+    "tools": { "image": "icons/tools.png" },
+    "upg_armor": { "image": "icons/upg_armor.png" },
+    "upg_axe": { "image": "icons/upg_axe.png" },
+    "upg_axeDouble": { "image": "icons/upg_axeDouble.png" },
+    "upg_bow": { "image": "icons/upg_bow.png" },
+    "upg_dagger": { "image": "icons/upg_dagger.png" },
+    "upg_hammer": { "image": "icons/upg_hammer.png" },
+    "upg_helmet": { "image": "icons/upg_helmet.png" },
+    "upg_shield": { "image": "icons/upg_shield.png" },
+    "upg_shieldSmall": { "image": "icons/upg_shieldSmall.png" },
+    "upg_spear": { "image": "icons/upg_spear.png" },
+    "upg_sword": { "image": "icons/upg_sword.png" },
+    "upg_wand": { "image": "icons/upg_wand.png" },
+    "wand": { "image": "icons/wand.png" },
+    "x": { "image": "icons/x.png" }
+  }
+}
