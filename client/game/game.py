@@ -46,9 +46,9 @@ class Game:
       
       # write zone_data to zone_source
       with open(zone_source,'w') as tmxfile:
-        tmxfile.write(zone_data)
+        tmxfile.write('client_data/' + zone_data)
        
-      self.zones[zone_source] = load_pyglet(zone_source)
+      self.zones[zone_source] = load_pyglet('client_data/' + zone_source)
       self.zone = self.zones[zone_source]
     
       for layer in self.zone.layers:

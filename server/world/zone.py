@@ -5,6 +5,7 @@ from monsterspawn import MonsterSpawn
 from npcspawn import NpcSpawn
 from warp import Warp
 import ConfigParser
+import os
 
 def load_zones(world):
 
@@ -29,7 +30,7 @@ class Zone:
   def __init__(self, name, source, title, borders, world):
 
     self.name   = name
-    self.source = source
+    self.source = os.path.basename(source)
     self.title  = title
     self.world  = world
     self.borders = borders
@@ -40,7 +41,7 @@ class Zone:
     self.client_data = ''
     with open(source, 'r') as zonefile:
       self.client_data = zonefile.read()
-
+    
     self.width = self.data.width
     self.height = self.data.height
 

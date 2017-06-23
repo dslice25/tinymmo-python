@@ -2,3 +2,6 @@
 .DS_Store
 client/venv
 server/venv
+build
+dist
+game_client.spec

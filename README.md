@@ -8,7 +8,7 @@ Requires python 2.7
 Tested on Mac OSX 10+
 
 
-### Setup using virtual environment:
+## Setup using virtual environment:
 
 ```
 git clone https://github.com/dslice25/tinymmo.git
@@ -35,7 +35,8 @@ Then in a new terminal:
 source pyenv/bin/activate
 python game_client.py
 ```
- 
+
+The game ships with a very simple world, consisting of the town of Stuck and surrounding territory. 
 
 ### Build the client on Mac (for mac):
 
@@ -54,5 +55,9 @@ You can now distribute build/game_client to users.
  TODO
 
 ### Build the client on Linux (for linux):
+
+ TODO
+
+## Worldbuilding
 
  TODO
