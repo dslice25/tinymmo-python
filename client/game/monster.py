@@ -9,7 +9,7 @@ class Monster:
     self.x = x
     self.y = y
 
-    raw = pyglet.image.load(source)
+    raw = pyglet.image.load('client_data/' + source)
     grid = pyglet.image.ImageGrid(raw, 4, 3)
     self.frame_w = grid[0].width
     self.frame_h = grid[0].height

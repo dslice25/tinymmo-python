@@ -10,7 +10,7 @@ import os
 def load_zones(world):
 
   config = ConfigParser.RawConfigParser()
-  config.read('data/zones.ini')
+  config.read('server_data/zones.ini')
   
   for name in config.sections():
     title = config.get(name,'title')
@@ -36,10 +36,10 @@ class Zone:
     self.borders = borders
     
     # Logic to load zone file
-    self.data = pytmx.TiledMap(source)
+    self.data = pytmx.TiledMap('server_data/zones/' + source)
     
     self.client_data = ''
-    with open(source, 'r') as zonefile:
+    with open('server_data/zones/' + source, 'r') as zonefile:
       self.client_data = zonefile.read()
     
     self.width = self.data.width

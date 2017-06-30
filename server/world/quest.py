@@ -3,7 +3,7 @@ import ConfigParser
 def load_quests(world):
 
   config = ConfigParser.RawConfigParser()
-  config.read('data/quests.ini')
+  config.read('server_data/quests.ini')
   
   
   for name in config.sections():

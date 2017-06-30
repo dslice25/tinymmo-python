@@ -88,7 +88,7 @@ class AnimationSet:
     back_path = None
     ammo_path = None
     
-    base = 'data/Universal-LPC-spritesheet/'
+    base = 'client_data/Universal-LPC-spritesheet/'
 
     body_path = base + "body/%s/%s.png" % ( self.gender, self.body )
     

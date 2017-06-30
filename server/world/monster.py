@@ -6,7 +6,7 @@ from twisted.internet import task, reactor
 class Monster:
   
   config = ConfigParser.RawConfigParser()
-  config.read('data/monsters.ini')
+  config.read('server_data/monsters.ini')
   index = 0
 
   def getid(self):

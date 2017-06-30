@@ -6,7 +6,7 @@ from twisted.internet import task, reactor
 class Npc:
 
   config = ConfigParser.RawConfigParser()
-  config.read('data/npcs.ini')
+  config.read('server_data/npcs.ini')
   index  = 0
 
   def getid(self):

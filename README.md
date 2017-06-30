@@ -42,7 +42,7 @@ The game ships with a very simple world, consisting of the town of Stuck and sur
 
 ```
 source pyenv/bin/activate
-pyinstaller game_client.py --add-data data:data
+pyinstaller game_client.py --add-data client_data:client_data
 ```
 
 See pyinstaller docs (https://pyinstaller.readthedocs.io/en/stable/index.html) for additional build options.

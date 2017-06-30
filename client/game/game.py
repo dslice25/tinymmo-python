@@ -45,13 +45,14 @@ class Game:
     if not self.zones.has_key(zone_source):
       
       # write zone_data to zone_source
-      with open(zone_source,'w') as tmxfile:
-        tmxfile.write('client_data/' + zone_data)
+      with open('client_data/zones/' + zone_source,'w') as tmxfile:
+        tmxfile.write(zone_data)
        
-      self.zones[zone_source] = load_pyglet('client_data/' + zone_source)
+      self.zones[zone_source] = load_pyglet('client_data/zones/' + zone_source)
       self.zone = self.zones[zone_source]
     
       for layer in self.zone.layers:
+        print layer
         if layer.name == 'character' or layer.name == 'blocked' or layer.name == 'block' or layer.name == 'spawns':
           pass
         else:
@@ -86,7 +87,7 @@ class Game:
 
     # Set our label to green :)
     self.players[player_name].label.color = (0,255,0,255)
-
+    
   def draw(self):
     if self.player_name == None:
       return
@@ -113,5 +114,6 @@ class Game:
         # Don't draw the blocked layer
         pass
       else:
-        layer.batch.draw()
+        #layer.batch.draw()
+        pass
 

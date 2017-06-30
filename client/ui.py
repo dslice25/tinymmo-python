@@ -14,7 +14,7 @@ import copy
 import os
 import json
 
-UI_THEME = Theme(json.load(open('data/theme/mmo_theme.json','r')), resources_path='/Users/dablum/test-game/data/theme/')
+UI_THEME = Theme(json.load(open('client_data/theme/mmo_theme.json','r')), resources_path='client_data/theme/')
 
 
 class ConnectManager(Manager):

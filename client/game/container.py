@@ -8,7 +8,7 @@ class Container:
     self.x     = x
     self.y     = y
 
-    raw = pyglet.image.load(source)
+    raw = pyglet.image.load('client_data/' + source)
     self.sprite = pyglet.sprite.Sprite(raw.get_region(source_x,source_y,source_width,source_height), self.x * 32, self.y * 32)
     
   def draw(self, target):

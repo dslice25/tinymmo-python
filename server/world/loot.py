@@ -5,7 +5,7 @@ import copy
 def load_loot(world):
 
   config = ConfigParser.RawConfigParser()
-  config.read('data/loot.ini')
+  config.read('server_data/loot.ini')
 
   loot = []
   

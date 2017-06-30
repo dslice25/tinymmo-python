@@ -8,10 +8,10 @@ from twisted.internet import task, reactor
 def load_players(world, x, y, zone):
 
   pconfig = ConfigParser.RawConfigParser()
-  pconfig.read('data/players.ini')
+  pconfig.read('server_data/players.ini')
   
   iconfig = ConfigParser.RawConfigParser()
-  iconfig.read('data/items.ini')
+  iconfig.read('server_data/items.ini')
   
   
   for name in pconfig.sections():

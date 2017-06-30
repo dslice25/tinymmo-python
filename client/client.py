@@ -29,7 +29,7 @@ class Client:
     self.window = pyglet.window.Window(640,480)
     self.loginManager = LoginManager(self)
     self.connectManager = ConnectManager(self)
-    #self.chatManager = ChatWindowManager(self)
+    self.chatManager = ChatWindowManager(self)
     self.inventoryManager = None
     self.shopManager = None
     self.popupManager = None
@@ -62,12 +62,13 @@ class Client:
       self.log(data)
       self.game.players[data['name']] = Player(data['title'],data['gender'],data['body'],data['hairstyle'],data['haircolor'],data['armor'],data['head'],data['weapon'],data['x'],data['y'])
       message = "%s is here." % (data['name'])
-      #self.chatManager.add_message(message)
+      self.chatManager.add_message(message)
     elif data['type'] == 'dropplayer':
       self.log(data)
+      self.game.players[data['name']].unload()
       del self.game.players[data['name']]
       message = "%s left." % (data['name'])
-      #self.chatManager.add_message(message)
+      self.chatManager.add_message(message)
     elif data['type'] == 'addmonster':
       self.log(data)
       self.game.monsters[data['name']] = Monster(data['title'],data['source'],data['x'],data['y'])
@@ -109,7 +110,7 @@ class Client:
         title = self.game.players[data['name']].title
         dam = data['dam']
         target_title = data['target_title']
-        #self.chatManager.add_message("%s slashes %s for %s damage!" % (title,target_title,dam))
+        self.chatManager.add_message("%s slashes %s for %s damage!" % (title,target_title,dam))
     elif data['type'] == 'playerthrust':
       self.log(data)
       if self.game.players.has_key(data['name']):
@@ -118,7 +119,7 @@ class Client:
         #self.sounds.play('melee')
         dam = data['dam']
         target_title = data['target_title']
-        #self.chatManager.add_message("%s stabs %s for %s damage!" % (title,target_title,dam))
+        self.chatManager.add_message("%s stabs %s for %s damage!" % (title,target_title,dam))
     elif data['type'] == 'playerbow':
       self.log(data)
       if self.game.players.has_key(data['name']):
@@ -126,12 +127,12 @@ class Client:
         title = self.game.players[data['name']].title
         dam = data['dam']
         target_title = data['target_title']
-        #self.chatManager.add_message("%s shoots %s for %s damage!" % (title,target_title,dam))
+        self.chatManager.add_message("%s shoots %s for %s damage!" % (title,target_title,dam))
     elif data['type'] == 'playercast':
       self.log(data)
       if self.game.players.has_key(data['name']):
         title = self.game.players[data['name']].title
-        #self.chatManager.add_message("%s casts!" % (title))
+        self.chatManager.add_message("%s casts!" % (title))
     elif data['type'] == 'npcslash':
       self.log(data)
       if self.game.npcs.has_key(data['name']):
@@ -140,7 +141,7 @@ class Client:
         title = self.game.npcs[data['name']].title
         dam = data['dam']
         target_title = data['target_title']
-        #self.chatManager.add_message("%s slashes %s for %s damage!" % (title,target_title,dam))
+        self.chatManager.add_message("%s slashes %s for %s damage!" % (title,target_title,dam))
     elif data['type'] == 'npcthrust':
       self.log(data)
       if self.game.npcs.has_key(data['name']):
@@ -149,7 +150,7 @@ class Client:
         #self.sounds.play('melee')
         dam = data['dam']
         target_title = data['target_title']
-        #self.chatManager.add_message("%s stabs %s for %s damage!" % (title,target_title,dam))
+        self.chatManager.add_message("%s stabs %s for %s damage!" % (title,target_title,dam))
     elif data['type'] == 'npcbow':
       self.log(data)
       if self.game.npcs.has_key(data['name']):
@@ -157,12 +158,12 @@ class Client:
         title = self.game.npcs[data['name']].title
         dam = data['dam']
         target_title = data['target_title']
-        #self.chatManager.add_message("%s shoots %s for %s damage!" % (title,target_title,dam))
+        self.chatManager.add_message("%s shoots %s for %s damage!" % (title,target_title,dam))
     elif data['type'] == 'npccast':
       self.log(data)
       if self.game.npcs.has_key(data['name']):
         title = self.game.npcs[data['name']].title
-        #self.chatManager.add_message("%s casts!" % (title))
+        self.chatManager.add_message("%s casts!" % (title))
     elif data['type'] == 'inventory':
       self.log(data)
       self.inventoryManager = None
@@ -207,7 +208,7 @@ class Client:
         dam = data['dam']
         target = data['target']
         self.game.monsters[data['name']].attack()
-        #self.chatManager.add_message("%s hits %s for %s damage!" % (title,target,dam))
+        self.chatManager.add_message("%s hits %s for %s damage!" % (title,target,dam))
     elif data['type'] == 'monsterstop':
       self.log(data)
       if self.game.monsters.has_key(data['name']):
@@ -216,19 +217,21 @@ class Client:
       self.log(data)
       if self.game.monsters.has_key(data['name']):
         self.game.monsters[data['name']].die()
-        #self.chatManager.add_message("%s dies!" % data['title'])
+        self.chatManager.add_message("%s dies!" % data['title'])
     elif data['type'] == 'dropmonster':
       self.log(data)
       if self.game.monsters.has_key(data['name']):
+        self.game.monsters[data['name']].unload()
         del self.game.monsters[data['name']]
     elif data['type'] == 'npcdie':
       self.log(data)
       if self.game.npcs.has_key(data['name']):
         self.game.npcs[data['name']].die()
-        #self.chatManager.add_message("%s dies!" % data['title'])
+        self.chatManager.add_message("%s dies!" % data['title'])
     elif data['type'] == 'dropnpc':
       self.log(data)
       if self.game.npcs.has_key(data['name']):
+        self.game.npcs[data['name']].unload()
         del self.game.npcs[data['name']]
     elif data['type'] == 'settarget':
       self.log(data)
@@ -246,10 +249,10 @@ class Client:
     elif data['type'] == 'playerchat':
       self.log(data)
       message = "<%s> %s" % (data['name'],data['message'])
-      #self.chatManager.add_message(message)
+      self.chatManager.add_message(message)
     elif data['type'] == 'message':
       self.log(data)
-      #self.chatManager.add_message(data['message'])
+      self.chatManager.add_message(data['message'])
     elif data['type'] == 'tick':
       self.log(data)
     elif data['type'] == 'loginfailed':
@@ -385,7 +388,7 @@ class Client:
     def on_draw():
       self.window.clear()
       self.game.draw()
-      #self.chatManager.draw()
+      self.chatManager.draw()
       
       if self.shopManager:
         self.shopManager.draw()  
@@ -429,8 +432,7 @@ class Client:
         if self.game.player_target:
           self.protocol.send({"action": "activate", })
         else:
-          pass
-          #self.chatManager.add_message("You must have a target to do that!")
+          self.chatManager.add_message("You must have a target to do that!")
 
 
   def start(self):

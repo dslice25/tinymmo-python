@@ -4,7 +4,7 @@ class Item:
 
   index = 0
   config = ConfigParser.RawConfigParser()
-  config.read('data/items.ini')
+  config.read('server_data/items.ini')
 
   def getid(self):
     

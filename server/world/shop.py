@@ -27,7 +27,7 @@ class ShopItem:
 def load_shops(world):
 
   config = ConfigParser.RawConfigParser()
-  config.read('data/shops.ini')
+  config.read('server_data/shops.ini')
 
   shops = []
   
@@ -51,7 +51,7 @@ class Shop:
     self.message = "Welcome to my shop! What would you like to buy?"
 
     config = ConfigParser.RawConfigParser()
-    config.read('data/items.ini')
+    config.read('server_data/items.ini')
 
     for sale_item in for_sale:
       title = config.get(sale_item,'title')
