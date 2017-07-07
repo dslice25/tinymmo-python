@@ -52,7 +52,6 @@ class Game:
       self.zone = self.zones[zone_source]
     
       for layer in self.zone.layers:
-        print layer
         if layer.name == 'character' or layer.name == 'blocked' or layer.name == 'block' or layer.name == 'spawns':
           pass
         else:
@@ -114,6 +113,6 @@ class Game:
         # Don't draw the blocked layer
         pass
       else:
-        #layer.batch.draw()
+        layer.batch.draw()
         pass
 

@@ -5,3 +5,4 @@ server/venv
 build
 dist
 game_client.spec
+client_data/zones/*.tmx
