@@ -101,6 +101,8 @@ class GameProtocol(basic.LineReceiver):
     def sendevents(self):
       if self.authenticated and self.player_name:
         events = self.factory.world.get_events(self.player_name, self.last_event)
+        if not events['events']:
+          return
         events_data = self.prepare(events)
         if events_data:
           self.transport.write(events_data)
